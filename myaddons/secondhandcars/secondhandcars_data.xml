@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="secondhandcars.brand" id="secondhandcars_brand_peugeot">
+            <field name="name">Peugeot</field>
+	    <field name="inter_site">intertes</field>
+	    <field name="local_site">localrtes</field>
+	    <field name="mod_page">model page</field>
+        </record>
+        <record model="secondhandcars.brand" id="secondhandcars_brand_renault">
+            <field name="name">Renault</field>
+	    <field name="inter_site">intertes</field>
+	    <field name="local_site">localrtes</field>
+	    <field name="mod_page">model page</field>
+        </record>
+        <record model="secondhandcars.brand" id="secondhandcars_brand_citroen">
+            <field name="name">Citroen</field>
+	    <field name="inter_site">intertes</field>
+	    <field name="local_site">localrtes</field>
+	    <field name="mod_page">model page</field>
+        </record>
+	
+	<record model="secondhandcars.model" id="secondhandcars_model_citroen">
+            <field name="name">p_citroen</field>
+	    <field name="brand_id" eval="secondhandcars_brand_citroen"/>
+	    <field name="last_year">457</field>
+        </record>
+
+        <record id="base.user_demo" model="res.users">
+            <field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+    </data>
+</openerp>
+
